@@ -1,6 +1,6 @@
 # Anubisshop ⌨️
 
-![image](./public/imagen/Anubisshop.png)
+![image](./public/images/Anubisshop.png)
 
 _En la actualidad, las mascotas, en especial perros y gatos son tenidos en cuenta como miembros de las familias argentinas, y así mismo, su cuidado y alimentación es cada vez más importante a tener en cuenta dentro de los gastos del mes; esto es debido a la fidelidad, compañía, aportes en aprendizaje de niños y adultos, protección, entre otros factores,que simboliza el animal._
 
