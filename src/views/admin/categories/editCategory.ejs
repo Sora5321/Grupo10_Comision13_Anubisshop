@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('../partials/headb') %> 
+
+<body>
+    <%- include('../partials/header') %> 
+
+    <section class="category">
+
+        <form action="/admin/categorias/<%= categoria.id %>?_method=PUT" method="POST" id="edit-category">
+
+            <div class="input-box">
+                <label for="category"><h4>Editar categoria</h4></label>
+                <input type="text" name="name" class="input-category" id="name_category" placeholder="Nombre de la categoria"  value="<%= categoria.name %>">
+                <span class="error" id="nameCategory_Error" style="color: red"></span>
+            </div>
+            
+            <span style="color:red ;" id="error_submit"></span>
+            <div class="btn-box">
+                <button class="add_category" type="submit">Editar</button>
+            </div> 
+
+        </form>
+
+    </section>
+
+
+
+    <%- include('../partials/footer') %>
+    <%- include('../partials/scripts') %>
+</body>
+</html>

@@ -1,0 +1,36 @@
+main.aboutUs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+main.aboutUs h2{
+    font-weight: bold;
+    color: var(--color-VioletaClaro);
+}
+main.aboutUs p.about_us{
+    margin: 1rem;
+}
+
+main.aboutUs i.quote__{
+    align-self: flex-start;
+    color:var(--color-VioletaOscuro) ;
+}
+main.aboutUs i.quote2__{
+    align-self: flex-end;
+    color:var(--color-VioletaOscuro) ;
+}
+
+div.huella{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 10rem;
+    height: 7rem;
+}
+div.huella i.huella{
+    color:var(--color-VioletaOscuro);
+    font-size: 5rem;
+}

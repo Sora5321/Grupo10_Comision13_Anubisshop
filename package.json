@@ -1,0 +1,37 @@
+{
+  "name": "grupo_10_comision13_anubisshop",
+  "version": "1.0.0",
+  "description": "![image](./public/imagen/Anubisshop.png)",
+  "main": "src/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop/issues"
+  },
+  "homepage": "https://github.com/JhanDiaz77/grupo_10_Comision13_Anubisshop#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "bcryptjs": "^2.4.3",
+    "cookie-parser": "^1.4.6",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-session": "^1.17.2",
+    "express-validator": "^6.14.0",
+    "method-override": "^3.0.0",
+    "multer": "^1.4.4",
+    "mysql2": "^2.3.3",
+    "node-fetch": "^2.6.1",
+    "nodemon": "^2.0.19",
+    "sequelize": "^6.20.0",
+    "to": "^0.2.9",
+    "update": "^0.7.4"
+  }
+}

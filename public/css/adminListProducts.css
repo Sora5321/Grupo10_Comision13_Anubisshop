@@ -1,0 +1,113 @@
+main.adminTab{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+    
+}
+
+h1.edit{
+    font-weight: bolder;
+    align-self: flex-start;/* 
+    padding-left: 1rem; */
+    margin: 1rem;
+}
+table.list{
+    background-color: #e3e4ff;
+    width: 95%;
+    border-style: none;
+    padding-left: 10px;
+    border-radius: 8px;
+}
+table.list thead th{
+    border-radius: 8px;
+}
+
+table.list thead tr th.__id{
+    padding-left: 10px;
+}
+
+table.list th{
+    background-color: #d6d7ff;
+    height: 4rem;
+    padding-right: 7px;
+}
+table.list tbody tr td{
+    margin: 8px;
+    height: 6rem;
+    padding: 5px;
+}
+table.list tbody tr td strong{
+     font-weight: bold; 
+    padding-left: 10px;
+}
+table.list tbody tr td a {
+    background-color: forestgreen;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 5px;
+}
+table.list tbody tr td form button {
+    background-color: firebrick;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-style: none;
+    margin-right: 5px;
+}
+
+table.list tbody tr td.editDelete{
+    padding-left: 20px;
+}
+
+table.list tbody tr.productInfo:hover{
+    background-color:#d6d7ff ;
+}
+table.list tbody tr td a i, table tbody tr td form button i{
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+
+@media (min-width: 480px){
+    table.list th{
+        text-align: center;
+        padding: 8px;
+    }
+    table.list tbody tr td{
+        margin: 8px;
+        text-align: center;
+    }
+    table.list tbody tr td strong{ 
+       padding-left: 0px;
+    }
+    table.list tbody tr td.editDelete{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+   }
+   table.list tbody tr td.editDelete a, table.list tbody tr td.editDelete button{
+       padding: 0;
+       margin: 4px;
+   }
+   
+}
+
+@media (min-width: 820px){
+    table.list{
+    width: 800px;
+    border-style: none;
+    padding-left: 10px;
+    }
+}

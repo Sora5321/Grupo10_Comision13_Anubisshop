@@ -1,0 +1,22 @@
+@import url(generales.css);
+@import url(variables.css);
+@import url(header.css);
+@import url(contact.css);
+@import url(nosotros.css);
+@import url(card.css);
+@import url(home.css);
+@import url(productDetail.css);
+@import url(result.css);
+@import url(login.css);
+@import url(register.css);
+@import url(productCart.css);
+@import url(editProductForm.css);
+@import url(addProductForm.css);
+@import url(headerAdmin.css);
+@import url(adminIndex.css);
+@import url(adminListProducts.css);
+@import url(addCategory.css);
+/* @import url(userProfile.css); */
+@import url(userProfile.css);
+@import url(restriccion.css);
+@import url(footer.css);

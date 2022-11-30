@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/headb') %> 
+<body>
+  <%- include('../partials/header') %> 
+  
+  <main>
+    <div class="listCatProd">
+      <button id="listCatProdButton" class="btn-listCatProd"> Listado por categorias  </i><i class="fa-solid fa-turn-down"></i></button>
+      <ul class="selectCat" id="selectCategory">
+        <li><a class="selecLi"  href="juguetes">Juguetes</a></li>
+        <li><a class="selecLi"  href="accesorios">Accesorios</a></li>
+        <li><a class="selecLi"  href="camas">Camas</a></li>
+        <li><a class="selecLi"  href="comidas">Alimentos</a></li>
+        <li><a class="selecLi"  href="higiene">Higiene</a></li>
+      </ul>
+    </div>
+    <section class="section-main">   
+        <h2 class="listadoProductos">Listado de Camas</h2>
+        <section class="section-ofertas">
+            <div class="product-final">
+              <% products.forEach( product => { %>
+                <article class="article-final">
+                  <% if (product.discount > 0) { %>
+                      <span class="ifdiscount"><%= product.discount %> %</span>    
+                <% } %>
+                  <a href="/productos/detail/<%- product.id %>">
+                    <div class="cont-imagen">
+                        <img src="/images/products/<%- product.images%>" alt="ARNES">
+                    </div>
+                    <div class="detail-product">
+                      <h3><%- product.name %></h3>
+                            <% if (product.discount > 0) { %>
+                            <span class="card__priceSale--original">$ <%= product.price %> </span> 
+                            <span class="actualPrice"> Ahora $ <%=  product.price - product.discount * product.price / 100 %> </span>
+                            <% } else { %>
+                              <span class="default-msg">Producto 100% Argentino </span>  
+                              <span class="simplePrice">$ <%- product.price %></span>
+                            <% } %>
+                    </div>
+                    <div class="boton-press">
+                        <div class="boton-one">
+                            <button type="submit"><i class="fas fa-truck"></i>
+                                Agregar al carrito
+                            </button>
+                        </div>
+                    </div>
+                </a>
+                </article>
+              <% }) %>
+            </div>
+        </section>
+    </section>
+    
+    </main>
+
+      <%- include('../partials/footer') %> 
+      
+      <%- include('../partials/scripts') %> 
+      <script src="/js/listCategory.js"></script>
+
+</body>
+</html>

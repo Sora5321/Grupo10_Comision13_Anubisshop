@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <%- include('partials/headb')  %> 
+
+<body>
+    <%- include('partials/header') %>  
+    <!-- CARRUSEL -->
+    <div class="container_carrusel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="images/carrusel6.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/carrusel2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+              <img src="images/carrusel3.jpg" class="d-block w-100" alt="...">
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+       
+    <main class="home__">
+    <section class="section-main">   
+        <!-- INICIA SECCION PRODUCTOS EN OFERTAS -->
+        <h4>PRODUCTOS DESTACADOS</h4>
+         <section class="section-1">
+              <div class="product-final">
+                <% productosDestacados.forEach( product => { %>
+                    <article class="article-final">
+                      <% if (product.discount > 0) { %>
+                          <span class="ifdiscount"><%= product.discount %> %</span>    
+                    <% } %>
+                      <a href="/productos/detail/<%- product.id %>">
+                        <div class="cont-imagen">
+                            <img src="images/products/<%- product.images %>" alt="ARNES">
+                        </div>
+                        <div class="detail-product">
+                          <h3><%- product.name %></h3>
+                                <% if (product.discount > 0) { %>
+                                <span class="card__priceSale--original">$ <%= product.price %> </span> 
+                                <span class="actualPrice"> Ahora $ <%=  product.price - product.discount * product.price / 100 %> </span>
+                                <% } else { %>
+                                  <span class="default-msg">Producto 100% Argentino </span>  
+                                  <span class="simplePrice">$ <%- product.price %></span>
+                                <% } %>
+                        </div>
+                        <div class="boton-press">
+                            <div class="boton-one">
+                                <button type="submit"><i class="fas fa-truck"></i>
+                                    Agregar al carrito
+                                </button>
+                            </div>
+                        </div>
+                    </a>
+                    </article>
+                  <% }) %>
+            </div>
+        </section>
+        
+        <!-- INICIA SECCION OFERTAS -->
+        <h4>PRODUCTOS EN OFERTAS</h4>
+        <section class="section-1"> 
+            <div class="product-final">
+                <% productosOferta.forEach( product => { %>
+                  <article class="article-final">
+                    <% if (product.discount > 0) { %>
+                        <span class="ifdiscount"><%= product.discount %> %</span>    
+                  <% } %>
+                    <a href="/productos/detail/<%- product.id %>">
+                      <div class="cont-imagen">
+                        <img src="images/products/<%- product.images %>" alt="ARNES">
+                      </div>
+                      <div class="detail-product">
+                        <h3><%- product.name %></h3>
+                              <% if (product.discount > 0) { %>
+                              <span class="card__priceSale--original">$ <%= product.price %> </span> 
+                              <span class="actualPrice"> Ahora $ <%=  product.price - product.discount * product.price / 100 %> </span>
+                              <% } else { %>
+                                <span class="default-msg">Producto 100% Argentino </span>  
+                                <span class="simplePrice">$ <%- product.price %></span>
+                              <% } %>
+                      </div>
+                      <div class="boton-press">
+                          <div class="boton-one">
+                              <button type="submit"><i class="fas fa-truck"></i>
+                                  Agregar al carrito
+                              </button>
+                          </div>
+                      </div>
+                  </a>
+                  </article>
+                  <% }) %>
+            </div> 
+        </section>
+    </section>
+    
+    </main>
+    
+            
+    <%- include('partials/footer')  %> 
+  
+    <%- include('partials/scripts')  %>
+
+    </body>
+</html>

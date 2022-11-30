@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/headb') %> 
+<body class="tab">
+    <%- include('../partials/header') %>
+    <!-- <main class="listProducts"> -->
+        <main class="adminTab">
+            <h1 class="edit">Listado de productos</h1>
+                <!-- <strong>hola</strong> -->
+                <table class="list">
+                    <thead>
+                        <tr>
+                            <th class="__id">id</th>
+                            <th>Nombre</th>
+                            <th>Precio</th>
+                            <th>Categoria</th>
+                            <th>Edicion</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <% productos.forEach(producto => { %>
+                            <tr class="productInfo"> 
+                              <td> <strong> <%- producto.id %> </strong> </td>
+                              <td><%- producto.name %></td>
+                              <td><%- producto.price %></td>
+                              <td><%- producto.categorias.name %></td>
+                              <td class="editDelete">
+                                <a href="/admin/list/editar/<%- producto.id %>" >
+                                    <i class="fa-solid fa-pen-to-square"></i>
+                                </a>
+                                <form action="/admin/list/eliminar/<%- producto.id %>?_method=DELETE" method="post">
+                                  <button type="submit">
+                                    <i class="fa-solid fa-trash-can"></i>
+                                  </button>
+                                </form>
+                              </td>
+                            </tr>
+                          <% }) %> 
+                        
+                    </tbody>
+                    
+                </table>
+
+        <!-- </main> -->
+
+
+
+    </main>
+    
+    <%- include('../partials/footer')  %> 
+    <%- include('../partials/scripts')  %>
+</body>
+</html>

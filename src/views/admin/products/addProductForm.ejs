@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <%- include('../partials/headb')  %> 
+    
+    <body>
+        <%- include('../partials/header') %>  
+        
+        <section class="addProductSection">
+            <h3>Agregar Producto</h3>
+            
+            <form action="/admin/add" method="POST"  class="form_editProduct" enctype="multipart/form-data" id="addProduct-form">
+                <div class="boxxOne">
+                    <div class="input-container">
+                        <label for="name"><h2>Nombre del producto</h2></label>
+                        <input type="text" name="name" class="input-style" placeholder="Nombre del producto" id="name" value="<%= locals.old && old.name %>" >
+                        <% if (locals.errors && errors.name) { %>
+                            <small class="text-danger"><%= errors.name.msg%></small>
+                        <% } %>
+                        <span class="error" id="nameProductError" style="color: red"></span>
+                    </div>
+            
+                    <div class="input-container">
+                        <label for="categoria"><h2>Categoría</h2></label>
+                        <select name="categoryId" id="categoria" class="category">
+                            <option selected hidden> Seleccione una categoria</option>
+                            <% categories.forEach(category => { %>
+                                <option value="<%- category.id %>"><%- category.name %></option>
+                            <% }) %> 
+                        </select>
+                        <span class="error" id="categoryError" style="color: red"></span>
+                    </div>
+                    <!-- __________________IMAGE PREVIW_____________________ -->
+                    <div class="input-container img_">
+                        <label for="image" ><h2>Imagen</h2></label>
+                        <div class="img-container" id="img-preview">
+                            
+                        </div>
+                        <input class="form_image" name="image"  type="file" id="formFile" placeholder="Seleccione un archivo" >
+                    
+                        <% if (locals.errors && errors.image) { %>
+                        <small class="text-danger"><%= errors.image.msg%></small>
+                        <% } %>
+                        <span class="error" id="fileErrors" style="color: red"></span> 
+                    </div>
+                    <!-- ____________________________________________________ -->
+                    <div class="input-container">
+                        <label for="precio"><h2>Precio</h2></label>
+                        <input type="number" name="price" class="input-style" placeholder="" id="precio" value="<%= locals.old && old.price %>" >
+                        <% if (locals.errors && errors.price) { %>
+                            <small class="text-danger"><%= errors.price.msg%></small>
+                        <% } %>
+                        <span class="error" id="priceError" style="color: red"></span>
+                    </div>
+
+                </div>
+
+                <div class="boxxTwo">
+
+                
+                    <div class="input-container">
+                        <label for="discount"><h2>Descuento</h2></label>
+                        <input type="number" name="discount" class="input-style" placeholder="" id="discount" value="<%= locals.old && old.discount %>" >
+                        <span class="error" id="discountError" style="color: red"></span>
+                    </div>
+                    <div class="input-container">
+                        <label for="promo"><h2>Promo</h2></label>
+                        <select name="promo" id="promo" class="category">
+                            <option value="Ninguno">Ninguno</option>
+                            <option value="Oferta">Oferta</option>
+                            <option value="Destacado">Destacado</option>
+                        </select>
+                        <span class="error" id="promoError" style="color: red"></span>
+                    </div>
+                    <div class="input-container">
+                        <label for="description"><h2>Descripción</h2></label>
+                        <textarea name="description" class="input-style" id="description" cols="30" rows="10" style="height: 60px;"><%= locals.old && old.description%></textarea>
+                        <% if (locals.errors && errors.description) { %>
+                            <small class="text-danger"><%= errors.description.msg%></small>
+                        <% } %>
+                        <span class="error" id="descriptionError" style="color: red"></span>
+                    </div>
+            
+                    <span style="color:red ;" id="submitErrors"></span>
+                    <div class="btn-addForm">
+                        <button class="addSubmit" type="submit">Crear</button>
+                    </div> 
+
+                </div>
+            
+
+        </form>
+    </section>
+
+    <%- include('../partials/footer')  %> 
+    <%- include('../partials/scripts')  %>
+    
+</body>
+</html>

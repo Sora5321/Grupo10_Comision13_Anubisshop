@@ -1,0 +1,40 @@
+main.contact{
+    margin: 0.5rem;
+}
+main.contact h3{
+    margin: 1rem;
+    font-weight: bold;
+}
+main.contact p.message{
+    margin: 1rem;
+}
+
+main.contact div.info__Contact {
+    margin: 1rem;
+}
+main.contact div.info__Contact p a.linkTo_{
+    text-decoration: none;
+    color: black;
+}
+
+div.huella{
+    /* display: flex;
+    flex-direction: column; */
+    align-items:stretch ;
+    width: 10rem;
+    height: 7rem;
+}
+div.huella i.huella{
+    color:var(--color-VioletaOscuro);
+    font-size: 5rem;
+}
+@media (min-width: 420px){
+    div.info__Contact{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    div.huella{
+        align-self: center;
+    }
+}

@@ -1,0 +1,349 @@
+
+ * {
+    padding: 0;
+    margin: 0;
+    font-family: var(--fuente-roboto);
+    box-sizing: border-box;
+}
+/* main.mainCart_{
+    margin: 0.5rem;
+} */
+
+div.carrito {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+div.carrito hr {
+   position: relative;
+   width: 100%;
+   margin: 0.2rem 0 0.4rem;
+   font-size: var(--discounts-descriptions);
+}
+
+div.carrito div.logo-carrito {
+    font-size: var(--title);
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 0 0.5rem;
+    padding: 0.2rem;
+}
+
+div.carrito section.producto {
+    display: flex;
+    width: 100%;
+    position: relative;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0.3rem;
+    margin: 0.3rem 0;
+    box-shadow: 0px 1px 3px 3px rgba(77, 75, 75, 0.2);
+    border-radius: 7px;
+   /*  border: 1px solid #000; */
+}
+
+div.carrito section.producto div.producto-img {
+    /* position: relative;*/
+    max-width: 60px;
+    max-height: 50%; 
+    /* border: 1px solid #000;  este no iba*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.carrito section.producto div.producto-img img {
+    position: relative;
+    display: block;
+    /* width: auto;
+    height: auto; */
+    max-width: 100%;
+    max-height: 70%;
+   
+}
+
+
+div.carrito section.producto div.producto-name {
+    position: relative;
+    display: flex;
+    text-align: left;
+    font-size: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%;
+    padding: 0.1rem 0.5rem 0;
+    /* border: 1px solid #000; */  
+}
+
+div.carrito section.producto div.producto-name input {
+    width: 2rem;
+    height: 1rem;
+    margin-bottom: 5px;
+    max-width: 100%;
+    text-align: center;
+}
+
+
+div.carrito section.producto div.producto-pago .priceProd_{
+ margin: 0px;
+}
+div.carrito section.producto div.producto-pago {
+    width: 20%;
+    padding: 1rem 0.5rem;
+    text-align: end;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+div.carrito section.producto div.producto-pago i {
+    font-size: 18px;
+    margin-bottom: 0.5rem;
+}
+
+div.pago div.costo {
+    position: relative;
+    font-size: var(--title);
+    text-align: left;
+    display: flex;
+    width: auto;
+    max-width: 100%;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+div.pago div.button-compra {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.pago div.button-compra button{
+    width: 75%;
+    height: 2.5rem;
+    border: none;
+    background-color: #292BFD;
+    color: var(--color-Gris-claro);
+    font-size: 24px;
+    border-radius: 9px;
+}
+
+div.pago div.metodo-pago {
+    font-size: var(--paragraphs);
+    margin: 1.4rem 1rem;
+}
+
+div.pago div.metodo-pago div {
+    letter-spacing: 0.3rem;
+    font-size: 25px;
+    padding: 2px 0;
+}
+
+div.pago div.tarjetas {
+    font-size: var(--paragraphs);
+    margin: 1.4rem 1rem;
+}
+
+div.pago div.tarjetas div {
+    letter-spacing: 0.3rem;
+    font-size: 25px;
+    padding: 2px 0; 
+}
+div.pago div.button-vaciar{
+    margin: 1rem;
+}
+
+div.pago div.button-vaciar button{
+    width: 50%;
+    height: 2rem;
+    border: none;
+    background-color: red;
+    color: var(--color-Gris-claro);
+    font-size: 20px;
+    border-radius: 9px;
+}
+
+div section.producto-recomendados{
+    display: flex;
+    flex-direction: column;
+    padding-top: 0.5rem;
+    /* border: solid 1px black; */
+    width: 100%;
+}
+div section.producto-recomendados h3.product-title{
+    margin: 1rem;
+    font-weight: bold;
+}
+div section.producto-recomendados div.listado-products-rec{
+    padding-top: 0.5rem;
+    /* border: solid 1px black; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div section.producto-recomendados article.producto-rec{
+    /* position: relative; */
+  /*   border: solid 1px black; */
+    
+    width: 90%;
+    
+}
+div section.producto-recomendados article.producto-rec div.imagen-producto-rec{
+    /* border: solid 1px black; */
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+div section.producto-recomendados article.producto-rec div.imagen-producto-rec img{
+    width: 90%;
+    max-width: 400px;
+}
+
+
+div section.producto-recomendados article.producto-rec div.detalles-producto div.producto-favorito {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div section.producto-recomendados article.producto-rec div.detalles-producto div.text-detalle .info_productt{
+    position: relative;
+    width: 100%;
+}
+
+/* Media querie */
+
+@media (min-width: 680px) {
+    main div.contenedor-carrito-pago {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: flex-start;
+    }
+
+    div.carrito {
+        
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 100%;
+        max-width: 604px;
+    }
+
+    div.pago {
+        width: 30%;
+        position: relative;
+        display: block;
+        top: 3rem;
+    }
+
+    div.carrito div.logo-carrito {
+
+        font-size: var(--title);
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        letter-spacing: 0.3rem;
+        
+    }
+
+    div.carrito div.logo-carrito i#x{
+        display: none;
+    }
+
+    div.carrito hr {
+        position: relative;
+        /* top: 13.8rem;
+        width: 75%; */
+        
+    }
+
+     div.pago {
+        width: 30%;
+        height: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        top: 3rem;
+        padding: 0.5rem;
+    }
+
+    div.pago div.costo {
+        width: 100%;
+        justify-content: space-between;
+        margin: 0;
+    }
+    
+    div.pago div.button-compra button{
+        width: 80%;
+        height: 2rem;
+        border: none;
+        font-size: 20px;
+    }
+
+    div.pago div.metodo-pago {
+        margin: 1rem 0;
+    }
+    
+    div.pago div.tarjetas {
+        margin: 1rem 0;
+    }
+
+    div.pago div.button-vaciar button{
+        width: 70%;
+        height: 2rem;
+        border: none;
+        font-size: 15px;
+    }
+
+    div section.producto-recomendados div.listado-products-rec{
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    div section.producto-recomendados article.producto-rec {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0.5rem;
+    }
+
+    div section.producto-recomendados article.producto-rec div.imagen-producto-rec{
+        /* border: solid 1px black; */
+        max-width: 300px;
+        max-height: 300px;
+        /* width: 160px;
+        height: 160px; */
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    div section.producto-recomendados article.producto-rec div.imagen-producto-rec img{
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    
+
+    div section.producto-recomendados article.producto-rec div.detalles-producto {
+        position: relative;
+        height: auto;
+        
+    }
+
+}

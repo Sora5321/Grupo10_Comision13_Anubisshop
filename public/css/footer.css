@@ -1,0 +1,124 @@
+/****************/
+/* FOOTER      */
+/**************/
+
+.footer {
+	background-color: var(--color-VioletaClaro);
+    width: 100%;
+    display: flex;
+    align-items: center ;
+    justify-content: space-between;
+	min-height: 300px;
+	position: absolute;
+	margin-top: 2rem;
+}
+
+
+.footer .footer_container{
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	width: 100%;
+	text-align: center;
+	height: 350px;
+	background-color: var(--color-VioletaClaro);
+}
+
+.footer .icon_footer{
+	border-radius: 100%;
+	margin: 5px;
+	width: 40px;
+}
+
+.footer .logo{
+	
+	/* height: 85px; */
+	width: 100px;
+	margin: 10px;
+	border-radius: 50%;
+    
+
+   
+}
+
+.footer a{
+	color: white;
+	display: inline-flex;
+	
+	margin: 5px 0;
+	text-align: center;
+	text-decoration: none;
+}
+	
+.footer a:hover{
+	color: (--color-VioletaClaro);
+	text-decoration: underline;
+}
+.footer-text{
+	width: 100%;
+	font-size: 15px;
+}
+.footer .footer-text p {
+	color: white;
+	margin: 5px;
+	text-align: center;
+}
+.qr-code {
+	display: none;
+}
+
+
+@media (min-width:768px) {
+
+	.footer-text{
+		font-size: 20px;
+	}
+
+	.footer .footer_container{
+		
+		flex-direction: row;
+		justify-content: space-evenly;
+
+	}
+
+	.footer div.footer_container div.icon-content{
+		display: flex;
+		flex-direction: column;
+	
+	}
+	
+	.logo-cont {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 49%;
+		width: 17%;
+		position: relative;
+	}
+
+	.footer .logo{
+		height: auto;
+		width: auto;
+		max-width: 100%;
+		max-height: 100%;
+		/* margin: 10px; */
+		border-radius: 50%;
+		position: absolute;
+	}
+
+}
+
+@media (min-width:1024px) {
+	.qr-code {
+		display: block;
+		height: 50%;
+		position: relative;
+	}
+	
+	.qr_img {
+		height: auto;
+		width: auto;
+		max-height: 100%;
+	}
+}

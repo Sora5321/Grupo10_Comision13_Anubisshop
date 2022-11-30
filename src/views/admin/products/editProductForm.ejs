@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/headb')  %> 
+
+<body>
+    <%- include('../partials/header') %>  
+
+
+    <section class="editProductSection">
+        <h3>Editar Producto</h3>
+
+        <form action="/admin/list/editar/<%= producto.id %>?_method=PUT" method="POST"  class="form_editProduct" enctype="multipart/form-data" id="editProduct-form">
+            
+            <div class="boxxOne">
+
+            
+                <div class="input-container">
+                    <label for="name"><h2>Nombre del producto</h2></label>
+                    <input type="text" name="name" class="input-style" placeholder="Nombre del producto" id="name_" value="<%= (locals.old && old.name) ? old.name : producto.name %>">
+                    <span class="error" id="nameProduct_Error" style="color: red"></span>
+                </div>
+                
+                <div class="input-container">
+                    <label for="categoria"><h2>Categoría</h2></label>
+                    <select name="categoryId" id="categoria_" class="category" value="<%- producto.categorias.name %>">  
+                        <% categories.forEach(category => { %>
+                            <option value="<%- category.id %>"><%- category.name %></option>
+                        <% }) %> 
+                    </select>
+                    <span class="error" id="category_Error" style="color: red"></span>
+                </div>
+                
+                <div class="input-container">
+                    <label for="image"><h2>Imagen</h2></label>
+                    <input type="file" name="image" class="form_image" placeholder="Seleccione un archivo" id="image_" value="<%= (locals.old && old.image) ? old.image : producto.image %>">
+                <small class="text-danger"><%= (locals.errors  && errors.image) ? errors.image.msg : "" %></small>
+                <span class="error" id="image_Error" style="color: red"></span>
+                </div>
+                <div class="input-container">
+                    <label for="precio"><h2>Precio</h2></label>
+                    <input type="number" name="price" class="input-style" value="<%= (locals.old && old.price) ? old.price : producto.price %>" id="precio_">
+                    <span class="error" id="price_Error" style="color: red"></span>
+                </div>
+
+            </div>
+
+            <div class="boxxTwo">
+
+                <div class="input-container">
+                    <label for="discount"><h2>Descuento</h2></label>
+                    <input type="number" name="discount" class="input-style" placeholder="" id="discount_" value="<%= (locals.old && old.discount) ? old.discount : producto.discount %>">
+                    <span class="error" id="discount_Error" style="color: red"></span>
+                </div>
+                <div class="input-container">
+                    <label for="promo"><h2>Promo</h2></label>
+                    <select name="promo" id="promo" class="input-style" value="<%- producto.promo %>">
+                        <option value="Ninguno">Ninguno</option>
+                        <option value="Oferta">Oferta</option>
+                        <option value="Destacado">Destacado</option>
+                    </select>
+                    <span class="error" id="promo_Error" style="color: red"></span>
+                </div>
+
+                <div class="input-container">
+                    <label for="description"><h2>Descripción</h2></label>
+                    <textarea name="description" class="input-style" id="descriptionn" cols="30" rows="10"><%= (locals.old && old.description) ? old.description : producto.description %></textarea>
+                    <span class="error" id="description_Error" style="color: red"></span>
+                </div>
+
+                <span style="color:red ;" id="submit_Error"></span>
+                <div class="btn-editForm">
+                    <button class="edit-submit" type="submit">Editar</button>
+                    <button class="reset" type="reset">Limpiar</button>
+                </div> 
+            
+            </div>
+
+        </form>
+    </section>
+    <%- include('../partials/footer')%> 
+    <%- include('../partials/scripts')  %>
+</body>
+</html>

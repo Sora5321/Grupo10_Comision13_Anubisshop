@@ -1,0 +1,88 @@
+<header>
+
+    <div class="header__container">
+
+        <div class="burger-menu">
+            <button class="menu-button">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+        </div>
+        
+        <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
+
+        <div class="header__carrito"> <a href="/productos/cart"><i style="color: black;" class="fa-solid fa-cart-shopping"></i> </a></div>
+        <div class="header__user"> <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+            <% if (typeof session.user != "undefined") { %>
+                <div class="punto-verde"></div>
+            <% } %> 
+        </div>
+
+    </div> 
+
+    <div class="header-buscador">
+        <!-- <p>Online</p> -->
+        <div class="search-bar">
+            <form class="search-bar-barra" action="/search" method="GET">
+                <input class="busqueda" type="text" name="keywords" placeholder="Buscar productos, marcas">
+                <button type="submit" class="lupa">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            
+        </div>
+
+    </div>    
+       
+    <div class="header_nav-burger">
+       
+        <nav class="header__nav">
+            <button class="close-nav">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <ul class="top-list">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="/productos">Productos</a></li>
+                <li><a href="/contacto">Contactos</a></li>
+                <li><a href="/nosotros">Quienes Somos</a></li>
+                <% if (typeof session.user != "undefined") { %>
+                    <li><a href="/usuarios/perfil/<%-session.user.id %>">Mi perfil</a></li> <!--       %-users.id % <>      si le agrego esto a la ruta, no deja ingresar a /productos   -->
+                    <li><a href="/usuarios/logout">Cerrar sesión</a></li>
+                    <% if (session.user.rol === 2 ) { %>
+                        <li><a href="/admin">Admin</a></li>
+                    <% } %>
+                <% } %> 
+                
+            </ul>
+            <% if (typeof session.user == "undefined") { %>
+                
+                <div class="end-nav">
+    
+                    <div class="iniciarsesion">
+                        <a href="/usuarios/login"><i class="fa-solid fa-user"></i>Iniciar sesión</a>
+                    </div>
+                    <div class="crearcuenta">
+                        <a href="/usuarios/register">Crear cuenta</a>
+                    </div>
+    
+    
+                    <!-- <div class="user-end-nav">
+                        <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <p><a href="">Iniciar sesión</a></p>
+                    <p><a href="">/ Crear cuenta</a></p> -->
+    
+                </div>
+                
+            <% } else{ %> 
+                <div class="end-nav">
+                    <a href="/usuarios/perfil/<%-session.user.id %>">Ir a mi perfil</a>
+
+                </div>
+            <% } %> 
+        </nav>
+    </div>
+   
+        
+            
+</header> 

@@ -1,0 +1,117 @@
+/* INICIO DE FORM LOGIN */
+
+section.login{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;
+      
+}
+section.login h3{
+    font-family: var(--fuente-roboto);
+    font-size: var(--title);
+    align-self: center;
+    padding: 1rem;   
+}
+section.login form{
+    width: 90%;
+    border-radius: 15px;
+    border:solid 1px var(--color-VioletaOscuro);    
+    padding: 10% 10px;
+    margin: 0 1rem 10px 1rem;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+}
+section.login div.input-container{
+    margin-bottom: 1.5rem;
+    width: 100%;   
+}
+
+section.login .input-style{
+    border: solid 1px black;
+    outline: none;
+    border-radius: 8px;
+    height: 2.5rem;
+    padding: 0.5rem;
+    margin-bottom: 0.2rem;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 2px 1px 1px lightgrey;
+} 
+section.login form div.input-container h2{
+    font-family: var(--fuente-roboto);
+    font-size: 1rem;
+    color: black;
+    padding-bottom: 8px;
+    align-self: flex-start;
+}
+div.contraseña{
+    margin: 8px;
+    align-self: flex-end;
+}
+
+div.btn-container, button.submit{
+    color: white;
+    border: none;
+    background-color: var(--color-VioletaClaro);
+    border-radius: 8px;
+    width: 100%;
+    height: 2.5rem;
+    margin-bottom: 0.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 1px 1px lightgrey;
+}
+
+div.btn-container{
+    margin: 10px;
+}
+
+div.btn-container, button.submit:hover{
+    background-color: var(--color-VioletaOscuro);
+    transition: 0.5s;
+    width: 100%;  
+}
+section.login form i{
+    font-style: normal;   
+}
+
+
+.is-invalid {
+    border: 1px solid red !important;
+}
+.is-valid{
+    border: 3px solid forestgreen !important;
+}
+
+/* FIN DE FORM LOGIN */
+
+/* MEDIA QUERIES */
+@media (min-width: 420px){
+
+    /* form */
+    section.login form{
+        width: 380px;
+        height: 85%;
+        border-radius: 15px;
+        border:solid 1px var(--color-VioletaOscuro);    
+        padding: 8% 10px;
+        margin: 0 1rem 10px 1rem;
+    }
+    /* fin form */
+}
+
+@media (min-width: 769px){
+    
+    /* inicio form */
+    section.login form{
+        width: 432px;
+        height: 85%;
+        border-radius: 15px;
+        border:solid 1px var(--color-VioletaOscuro);    
+        padding: 8% 10px;
+        margin: 0 1rem 10px 1rem;
+    }
+}

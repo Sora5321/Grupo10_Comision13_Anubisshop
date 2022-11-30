@@ -1,0 +1,81 @@
+
+    <header>
+
+        <div class="header__container">
+            <div class="burger-menu">
+                <button class="menu-button">
+                    <i class="fas fa-bars"></i>
+                </button>
+                        
+            </div>
+            
+            <div class="logo"> <a href="/"> <img src="/images/logo.jpg" alt=""></a></div>
+
+            <div class="header__carrito"> <a href="/productos/cart"><i style="color: black;" class="fa-solid fa-cart-shopping"></i> </a></div>
+            <div class="header__user"> <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                <% if (typeof session.user != "undefined") { %>
+                    <div class="punto-verde"></div>
+                <% } %> 
+            </div>
+        
+        </div>  
+        
+        <div class="header-buscador">
+           
+            <div class="search-bar">
+                <form class="search-bar-barra" action="/search" method="GET">
+                    <input class="busqueda" type="text" name="keywords" placeholder="Buscar productos, marcas">
+                    <button type="submit" class="lupa">
+                        <i class="fas fa-search"></i>
+                    </button>
+                    
+                </form>
+            </div>
+    
+        </div>  
+        
+    <!-- -----------------------------EMPIEZA ADMIN burguer --------------------------- -->
+
+        <div class="header_nav-burger">
+           
+            <nav class="header__nav">
+                <button class="close-nav">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                
+                <div class="adminControl">
+                        <div>
+                            <button id="_productos" class="admin-btn"> Productos <i class="fa-solid fa-caret-down"></i></button>
+                            <ul class="mini-menu">
+                                <li><a class="linkto"  href="/admin/list">Listado</a></li>
+                                <li><a class="linkto"  href="/admin/add">Agregar</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button id="_categorias" class="admin-btn">Categorias <i class="fa-solid fa-caret-down"></i></button>
+                            <ul  class="mini-menu2">
+                                <li><a class="linkto" href="/admin/categorias/lista"> Listado</a></li>
+                                <li><a class="linkto"  href="/admin/categorias/agregar"> Agregar</a></li>
+                            </ul>
+                        </div>
+
+                        <div>
+                            <button class="admin-btn"> <a href="/usuarios/logout">Cerrar sesion </a> </button>
+                        </div>
+                </div>
+                <div class="end-nav">
+                    <div class="user-end-nav">
+                        <a href="/usuarios/login"><i class="fa-solid fa-user"></i></a>
+                    </div>
+                    <p><a href="">Iniciar sesión</a></p>
+                    <p><a href="">/ Crear cuenta</a></p>
+    
+                </div>
+            </nav>
+        </div>
+        <!-- -----------------------------termina burguer --------------------------- -->
+       
+            
+                
+    </header> 

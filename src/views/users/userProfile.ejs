@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <%- include('../partials/headb')  %> 
+
+<body>
+    <%- include('../partials/header') %>
+
+    <section class="sect_prof">
+
+            <h2 class="myaccount">Mi cuenta</h2>
+
+            <div class="micuenta_">
+
+
+                <div class="imageProfile">
+                    <img class="img" src="/images/avatar/image-default.png" alt="">
+                </div>
+
+            </div>
+
+            <div class="infoContainer___">
+
+                <div class="misdatos_">
+
+                    <div class="editProfilesection">
+                        <h4>Mis datos</h4>
+
+                        <!-- <a href=""> Editar</a> -->
+                    </div>
+
+                    <div class="user__name">
+                        <i class="fa-solid fa-user"></i> 
+                        <span><%- user.name %> </span>
+        
+                    </div>
+
+                    <div class="user__email">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span><%-user.email %> </span>
+                    </div>
+
+                    <div class="user__phone">
+                        <i class="fa-solid fa-phone"></i>
+                        <span><%-user.phone %> </span>
+                    </div>
+
+                    <div class="editardatosBox">
+                        <form action="/usuarios/perfil?_method=PUT" method="POST">
+                        <h5>Editar mis datos</h5>
+                        <div class="inputCont">
+                            <label for="name">Nombre</label>
+                            <input class="" type="text" name="name" id="name">
+                            <% if (locals.errors && errors.name) { %>
+                                <small class="text-danger"><%= errors.name.msg %></small>
+                            <% } %>
+                            <span class="error" id="nameErrors" style="color: red"></span>
+                        </div>
+                        <div class="inputCont">
+                            <label for="phone">Teléfono</label>
+                            <input type="text"name="phone" id="phone">
+                            <% if (locals.errors && errors.phone) { %>
+                                <small class="text-danger"><%= errors.phone.msg %></small>
+                            <% } %>
+                        </div>
+                        <button  class="edit__Button" type="submit">Editar</button>
+                    </form>
+                    </div>
+
+                </div>
+
+
+
+                <div class="miscompras_">
+
+                    <h4>Mis compras</h4>
+
+                    <a href="">Ir a mi carrito</a>
+
+                    <a href="/">Ir a la tienda</a>
+
+                </div>
+            </div>
+
+            <!-- ______________gestion de direcciones________________ -->
+                
+            <div class="gestionDireccionBox">
+
+                <h5>Gestion de Direcciones</h5>
+                <form action="" method="">
+
+                    <div class="infoBox1">
+                        <div class="box_a">
+                            <label for="calle">Calle</label>
+                            <input type="text" name="calle" id="calle">
+                            <span class="error" id="calleErrors" style="color: red"></span>
+                        </div>
+
+                        <div class="box_b">
+                            <label for="number">Numero</label>
+                            <input type="text" name="number" id="number">
+                            <span class="error" id="numberErrors" style="color: red"></span>
+                        </div>
+                    </div>
+
+                    <div class="infoBox2">
+                        <div class="box_c">
+                            <select class="form-select" name="province" id="province">
+                                <option value="" hidden selected>Provincia</option>
+                            </select>
+
+                        </div>
+                            
+                        <div class="box_d">
+                            <select class="form-select" name="city" id="city">
+                                <option value="" hidden selected>Ciudad</option>
+                            </select>
+                        </div>
+
+                        <div class="btnDirection">
+                            <button class="addDirection" type="submit"> Agregar </button>
+                        </div>
+
+                    </div>
+
+                    
+                    
+
+
+                </form>
+
+            </div> 
+                
+    </section>
+
+    
+
+    <%- include('../partials/footer')  %> 
+    <%- include('../partials/scripts')  %>
+</body>
+</html>
+
+
+
+
+

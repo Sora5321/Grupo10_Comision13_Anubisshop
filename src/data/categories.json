@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Juguetes"
+    },
+    {
+        "id": 2,
+        "name": "Accesorios"
+    },
+    {
+        "id": 3,
+        "name": "Almohadones y camas"
+    },
+    {
+        "name": "Alimentos",
+        "id": 4
+    },
+    {
+        "name": "Higiene",
+        "id": 5
+    }
+]

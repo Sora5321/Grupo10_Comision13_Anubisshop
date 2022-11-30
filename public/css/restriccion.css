@@ -1,0 +1,38 @@
+
+
+body.restriccion{
+    background-color: rgb(90, 75, 255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    font-family:'Roboto', sans-serif ;
+}
+
+
+img.simbol{
+    width: 10rem;
+    animation: simbolo 1.5s alternate infinite ease-in;
+}
+@keyframes simbolo {
+    0% {
+        transform: translateY(-60px);
+        
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+h3.restriction_msg{
+    color: white;
+}
+a.backToHome{
+    color: white;
+    text-decoration: none;
+    background-color: #292BFD;
+    padding: 0.7rem;
+    border-radius: 5px;
+    margin: 1rem;
+    
+}

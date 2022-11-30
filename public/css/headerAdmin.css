@@ -1,0 +1,95 @@
+/* VISTA DESDE TABLET */
+div.adminControl{
+    display: flex;
+    /* justify-content: flex-start; */
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 5rem;
+
+}
+div.adminControl div ul.mini-menu{
+   padding-left: 10px;
+}
+
+button.admin-btn{
+    background-color: var(--color-VioletaClaro);
+    border-radius: 5px;
+    border-style: none;
+    font-size: 1rem ;
+    color: white;
+    height: 2rem;
+    padding: 5px 15px;
+    margin: 0.5rem;
+    width: 8rem;
+}
+button.admin-btn a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* button.admin-btn i{
+    padding-left: 10px;
+} */
+nav.header__nav div.adminControl div{
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+}
+
+nav.header__nav div.adminControl div ul.mini-menu, nav.header__nav div.adminControl div ul.mini-menu2{
+    display: none;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--color-VioletaClaro);
+    color: white;
+    width: 8rem;
+    padding-left: 15px;
+} 
+
+nav.header__nav div.adminControl div ul.mini-menu.active, nav.header__nav div.adminControl div ul.mini-menu2.active{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    background-color: var(--color-VioletaClaro);
+    color: white;
+    width: 8rem;
+    padding-left: 15px;
+    
+} 
+nav.header__nav div.adminControl div ul.mini-menu.active, nav.header__nav div.adminControl ul li a.linkto{
+    color: white;
+    font-weight: 100;
+}
+
+/* Media Querie PC */
+@media (min-width: 475px){
+    
+    div.adminControl{
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row;
+        margin-top: 0;
+    
+    }
+    button.admin-btn{
+        height: 2rem;
+        padding: 5px 15px;
+        margin: 0.5rem;
+    }
+    nav.header__nav div.adminControl div ul.mini-menu.active, nav.header__nav div.adminControl div ul.mini-menu2.active{
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        background-color: var(--color-VioletaClaro);
+        color: white;
+        width: 8rem;
+        padding-left: 15px;
+        
+    } 
+    nav.header__nav div.adminControl div ul.mini-menu, nav.header__nav div.adminControl div ul.mini-menu2{
+        margin-top: 2.7rem;
+        position: absolute;
+    }
+    
+} 

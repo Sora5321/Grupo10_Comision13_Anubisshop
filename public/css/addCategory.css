@@ -1,0 +1,54 @@
+section.category{
+    padding: 1rem;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.category form{
+    padding: 3rem 0.8rem;
+    width: 100%;
+    border: solid 1px var(--color-VioletaOscuro);
+    border-radius: 8px;  
+}
+
+section.category form div.input-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+section.category form div.input-box input.input-category{
+    width: 100%;
+    border: solid 1px var(--color-VioletaOscuro);
+    border-radius: 8px;
+    height: 2.5rem;
+    padding: 0.5rem;
+}
+
+section.category form div.btn-box button.add_category{
+    height:2.5rem ;
+    background-color: var(--color-VioletaClaro);
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    transition: 0.3s;
+    border-style: none;
+}
+section.category form div.btn-box button.add_category:hover{
+    background-color: var(--color-VioletaOscuro);
+}
+
+/* Media queries */
+@media (min-width: 480px){
+    section.category form{
+        width: 380px; 
+    }
+}
+@media (min-width: 720px){
+    section.category form{
+        width: 480px; 
+    }
+}
